@@ -1,0 +1,33 @@
+.block {
+  display: flex;
+  flex-direction: column;
+}
+.block_title {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.block_button {
+  margin-top: 80px;
+  width: 100%;
+  height: 90px;
+  border: none;
+  border-radius: 20px;
+  background: #3B285C;
+  cursor: pointer;
+}
+.block_button p {
+  color: #FFF;
+  text-align: center;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=EventSchedule.module.css.map */

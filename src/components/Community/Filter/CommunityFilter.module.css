@@ -1,0 +1,35 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: auto;
+}
+.block_title {
+  display: flex;
+  width: max-content;
+  margin-bottom: 50px;
+}
+.block_title_text {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-weight: 800;
+}
+.block_title_count {
+  width: 131px;
+  height: 70px;
+  margin-left: 25px;
+  border-radius: 20px;
+  border: 3px solid #3B285C;
+  background: #3B285C;
+}
+.block_title_count_value {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Mont, sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+  padding-top: 6px;
+}
+
+/*# sourceMappingURL=CommunityFilter.module.css.map */

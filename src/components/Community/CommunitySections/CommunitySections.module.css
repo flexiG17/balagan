@@ -1,0 +1,8 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  gap: 12px;
+}
+
+/*# sourceMappingURL=CommunitySections.module.css.map */

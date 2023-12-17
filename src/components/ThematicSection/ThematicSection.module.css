@@ -1,0 +1,27 @@
+.content {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.content_titleBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.content_titleBlock_text {
+  color: #18132C;
+  font-family: Mont SemiBold, Arial, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+.content_cards {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 140px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 45px;
+}
+
+/*# sourceMappingURL=ThematicSection.module.css.map */

@@ -1,0 +1,20 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.block_title {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.block_card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+/*# sourceMappingURL=SimilarCommunity.module.css.map */

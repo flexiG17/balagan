@@ -1,0 +1,51 @@
+.block {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  &_title {
+    color: #000;
+    font-family: Mont, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 20px;
+  }
+
+  &_price {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin-bottom: 20px;
+
+    &_input {
+      width: 195px;
+      height: 70px;
+      border-radius: 20px;
+      border: 3px solid #3B285C;
+      padding: 0 20px 0 20px;
+    }
+
+    &_input::placeholder {
+      color: #B4B2B7;
+      font-family: Mont, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &_input[type=text] {
+      color: #000;
+      font-family: Mont SemiBold, Arial, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+

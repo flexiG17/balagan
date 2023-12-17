@@ -1,0 +1,41 @@
+.block {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+.block_title {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-weight: 800;
+}
+.block_text {
+  color: #000;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.block_author {
+  display: flex;
+  gap: 40px;
+}
+.block_author_data {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.block_author_data_name {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 45px;
+  font-weight: 800;
+}
+.block_author_data_description {
+  color: #000;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=CommunityParticipants.module.css.map */

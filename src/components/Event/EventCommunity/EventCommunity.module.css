@@ -1,0 +1,33 @@
+.block {
+  display: flex;
+  flex-direction: column;
+}
+.block_title {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 15px;
+}
+.block_text {
+  color: #000;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.block_community {
+  display: flex;
+  gap: 140px;
+  margin-bottom: 60px;
+}
+.block_community svg {
+  margin-top: 60px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=EventCommunity.module.css.map */

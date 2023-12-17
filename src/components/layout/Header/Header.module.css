@@ -1,0 +1,76 @@
+.block {
+  padding-left: 130px;
+  padding-right: 130px;
+  background: #3B285C;
+}
+
+.mainBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoPosition {
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.logo {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.title {
+  cursor: pointer;
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.navBlock {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-top: 120px;
+}
+
+.linkStyle {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Mont, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hoverUnderlineAnimation {
+  display: inline-block;
+  position: relative;
+}
+
+.hoverUnderlineAnimation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderlineAnimation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+/*# sourceMappingURL=Header.module.css.map */

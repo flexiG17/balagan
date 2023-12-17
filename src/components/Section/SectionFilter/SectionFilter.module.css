@@ -1,0 +1,35 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: auto;
+}
+.block_title {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.block_title_text {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-weight: 800;
+}
+.block_title_count {
+  width: 130px;
+  height: 70px;
+  border-radius: 20px;
+  border: 3px solid #3B285C;
+  background: #3B285C;
+  padding-top: 7px;
+}
+.block_title_count p {
+  color: #FFF;
+  text-align: center;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=SectionFilter.module.css.map */

@@ -1,0 +1,36 @@
+.block {
+  display: flex;
+  flex-direction: column;
+}
+.block_info {
+  display: flex;
+  flex-direction: column;
+}
+.block_info_title {
+  color: #000;
+  font-family: Mont, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+.block_info_request {
+  display: flex;
+  margin-bottom: 35px;
+}
+.block_info_request_icon {
+  width: 45px;
+  margin-right: 20px;
+}
+.block_info_request_text {
+  color: #000;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=Prompt.module.css.map */

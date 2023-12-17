@@ -1,0 +1,23 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.block_title {
+  display: flex;
+  gap: 50px;
+}
+.block_title_text {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+}
+.block_description {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=EventRating.module.css.map */

@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 480px;
+  border-radius: 25.98px;
+  border: 3px solid #3B285C;
+  background: #FFF;
+
+  &_favorite {
+    width: 42px;
+    cursor: pointer;
+    margin: 20px 25px 0 auto;
+  }
+
+  &_image {
+    width: 160px;
+    margin: -5px auto 25px;
+
+    cursor: pointer;
+  }
+
+  &_title {
+    color: #000;
+    font-family: Mont SemiBold, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-bottom: 30px;
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto 20px;
+
+    &_button {
+      width: 155px;
+      height: 42px;
+
+      border-radius: 20px;
+      border: 3px solid #3B285C;
+
+      &_text {
+        color: #000;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+
+  &_data {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 12px;
+
+    &_image {
+      width: 35px;
+      margin-right: 10px;
+    }
+
+    &_userImage {
+      width: 25px;
+      margin-left: 5px;
+      margin-right: 10px;
+    }
+
+    &_text {
+      margin-top: auto;
+      margin-bottom: auto;
+
+      color: #000;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+  }
+}

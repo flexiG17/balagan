@@ -1,0 +1,27 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  margin-bottom: 40px;
+}
+.block_checkbox {
+  display: flex;
+}
+.block_checkbox_input {
+  appearance: none;
+  width: 45px;
+  height: 45px;
+  margin-right: 25px;
+  border-radius: 10px;
+  border: 3px solid #3B285C;
+}
+.block_checkbox_label {
+  color: #000;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*# sourceMappingURL=CheckboxComponent.module.css.map */

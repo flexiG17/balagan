@@ -1,0 +1,36 @@
+.block {
+  width: 1150px;
+  margin-bottom: 150px;
+}
+.block_title {
+  color: #000;
+  font-family: Mont, sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 35px;
+}
+.block_events {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+.block_button {
+  width: 560px;
+  height: 70px;
+  border-radius: 20px;
+  border: 3px solid #3B285C;
+  background: #3B285C;
+  padding-left: 25px;
+  cursor: pointer;
+}
+.block_button_text {
+  text-align: left;
+  color: #FFF;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=Answer.module.css.map */

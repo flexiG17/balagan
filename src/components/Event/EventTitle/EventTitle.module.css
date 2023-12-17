@@ -1,0 +1,80 @@
+.block {
+  width: 100%;
+  height: 370px;
+  background-image: url("./assets/picture.png");
+  margin-bottom: 80px;
+}
+.block_data {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: 130px;
+}
+.block_data_title {
+  color: #FFF;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 56px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+.block_data_sections {
+  display: flex;
+  margin-bottom: 35px;
+}
+.block_data_sections svg {
+  margin: auto 15px;
+}
+.block_data_sections_text {
+  color: #FFF;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
+.block_data_buttons {
+  display: flex;
+  gap: 20px;
+}
+.block_data_buttons_buy {
+  width: 240px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #FFFFFF;
+}
+.block_data_buttons_buy_text {
+  color: #100F21;
+  text-align: center;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+.block_data_buttons_favorite {
+  width: 46px;
+  height: 46px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.block_data_buttons_favorite_icon {
+  margin: 8px;
+}
+.block_data_buttons_notActual {
+  width: 240px;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  background: #3B285C;
+}
+.block_data_buttons_notActual_text {
+  color: #FFF;
+  text-align: center;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/*# sourceMappingURL=EventTitle.module.css.map */

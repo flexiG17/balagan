@@ -1,0 +1,13 @@
+.block {
+  display: flex;
+  flex-direction: column;
+}
+.block_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+/*# sourceMappingURL=EventComponent.module.css.map */

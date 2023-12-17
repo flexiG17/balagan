@@ -1,0 +1,9 @@
+.events {
+  display: flex;
+  column-gap: 25px;
+  row-gap: 50px;
+  margin-bottom: 70px;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=EventSet.module.css.map */
