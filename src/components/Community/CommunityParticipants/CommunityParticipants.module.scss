@@ -1,0 +1,46 @@
+.block {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+
+  &_title {
+    color: #18132C;
+    font-family: Mont, sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  &_text {
+    color: #000;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+
+    padding-bottom: 30px;
+  }
+
+  &_author {
+    display: flex;
+    gap: 40px;
+
+    &_data {
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+
+      &_name {
+        color: #18132C;
+        font-family: Mont, sans-serif;
+        font-size: 45px;
+        font-weight: 800;
+      }
+
+      &_description {
+        color: #000;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+}

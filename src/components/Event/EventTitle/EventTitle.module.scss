@@ -1,0 +1,93 @@
+.block {
+  width: 100%;
+  height: 370px;
+  background-image: url('./assets/picture.png');
+  margin-bottom: 80px;
+
+  &_data {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 130px;
+
+    &_title {
+      color: #FFF;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 56px;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      margin-top: 90px;
+      margin-bottom: 20px;
+    }
+
+    &_sections {
+      display: flex;
+      margin-bottom: 35px;
+
+      svg {
+        margin: auto 15px;
+      }
+
+      &_text {
+        color: #FFF;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+
+    &_buttons {
+      display: flex;
+      gap: 20px;
+
+      &_buy {
+        width: 240px;
+        height: 45px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+
+        background: #FFFFFF;
+
+        &_text {
+          color: #100F21;
+          text-align: center;
+          font-family: Mont SemiBold, sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+        }
+      }
+
+      &_favorite {
+        width: 46px;
+        height: 46px;
+        background: #FFFFFF;
+        border-radius: 15px;
+        cursor: pointer;
+
+        &_icon {
+          margin: 8px;
+        }
+      }
+
+      &_notActual {
+        width: 240px;
+        height: 45px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+
+        background: #3B285C;
+
+        &_text {
+          color: #FFF;
+          text-align: center;
+          font-family: Mont SemiBold, sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}

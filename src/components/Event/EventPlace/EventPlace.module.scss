@@ -1,0 +1,20 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &_title {
+    color: #18132C;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  &_text {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}

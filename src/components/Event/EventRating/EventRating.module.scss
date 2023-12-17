@@ -1,0 +1,24 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &_title {
+    display: flex;
+    gap: 50px;
+
+    &_text {
+      color: #18132C;
+      font-family: Mont, sans-serif;
+      font-size: 55px;
+      font-weight: 600;
+    }
+  }
+
+  &_description {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}

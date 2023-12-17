@@ -1,0 +1,19 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  margin-bottom: 150px;
+
+  &_title {
+    color: #18132C;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  &_events {
+    display: flex;
+    justify-content: space-between;
+  }
+}

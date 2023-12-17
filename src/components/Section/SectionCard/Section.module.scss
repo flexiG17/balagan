@@ -1,0 +1,44 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 350px;
+
+  &_image {
+    width: 350px;
+    height: 330px;
+
+    border-radius: 10px;
+    border: 1px solid #18132C;
+    background: #18132C;
+
+    cursor: pointer;
+
+    margin-bottom: 25px;
+  }
+
+  &_title {
+    color: #18132C;
+    font-family: Mont, Arial, sans-serif;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-bottom: 5px;
+
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &_description {
+    color: #18132C;
+    font-family: Mont, Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    cursor: pointer;
+  }
+}

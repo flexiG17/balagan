@@ -1,0 +1,25 @@
+.block {
+  display: flex;
+  flex-direction: column;
+
+  gap: 30px;
+
+  &_text {
+    color: #000;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  &_link {
+    color: #3B285C;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    text-decoration: underline;
+
+    cursor: pointer;
+  }
+}

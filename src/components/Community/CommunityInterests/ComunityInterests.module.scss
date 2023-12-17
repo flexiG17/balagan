@@ -1,0 +1,21 @@
+.block {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+
+  &_title {
+    color: #18132C;
+    font-family: Mont, sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  &_text {
+    color: #000;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+
+    margin-bottom: 35px;
+  }
+}

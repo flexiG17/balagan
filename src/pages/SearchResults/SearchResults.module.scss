@@ -1,0 +1,124 @@
+.block {
+  display: flex;
+}
+
+.block {
+  margin-left: 180px;
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    &_count {
+      display: flex;
+
+      &_component {
+        width: 131px;
+        height: 70px;
+        padding-top: 7px;
+        margin-left: 30px;
+
+        border-radius: 20px;
+        border: 3px solid #3B285C;
+        background: #3B285C;
+
+        &_text {
+          text-align: center;
+          color: #FFF;
+          font-family: Mont, sans-serif;
+          font-size: 37px;
+          font-weight: 700;
+        }
+      }
+    }
+
+    h2 {
+      color: #000;
+      font-family: Mont, sans-serif;
+      font-size: 55px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      margin-bottom: 35px;
+    }
+
+    &_title {
+      color: #000;
+      font-family: Mont, sans-serif;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      margin-bottom: 35px;
+    }
+
+    &_request {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 35px;
+
+      &_text {
+        color: #000;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+        cursor: pointer;
+      }
+
+      &_count {
+        color: #7D7D7D;
+        font-family: Mont, sans-serif;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_price {
+    display: flex;
+    justify-content: space-between;
+    width: 410px;
+    margin-bottom: 20px;
+
+    &_input {
+      width: 195px;
+      height: 70px;
+      border-radius: 20px;
+      border: 3px solid #3B285C;
+      padding: 0 20px 0 20px;
+    }
+
+    &_input::placeholder {
+      color: #B4B2B7;
+      font-family: Mont, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    &_input[type=text] {
+      color: #000;
+      font-family: Mont SemiBold, Arial, sans-serif;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}

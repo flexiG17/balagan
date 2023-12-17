@@ -1,0 +1,102 @@
+.block {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid #D7C6FF;
+  height: 190px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+
+  &_title {
+    color: #18132C;
+    font-family: Mont, sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+  }
+
+  &_place {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &_title {
+      width: 450px;
+      color: #000;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 45px;
+      font-weight: 700;
+    }
+
+    &_text {
+      color: #3B285C;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &_date {
+    display: flex;
+    height: 100px;
+
+    &_count {
+      color: #18132C;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 110px;
+      font-weight: 700;
+      margin-right: 20px;
+      line-height: 1;
+    }
+
+    &_block {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 5px;
+
+      &_day {
+        color: #3B285C;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1;
+      }
+
+      &_month {
+        color: #000;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+
+  &_time {
+    color: #151231;
+    text-align: center;
+    font-family: Mont SemiBold, sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+  }
+
+  &_button {
+    width: 250px;
+    height: 70px;
+
+    border-radius: 20px;
+    border: 3px solid #3B285C;
+    background: #3B285C;
+
+    cursor: pointer;
+
+    p {
+      color: #FFF;
+      text-align: center;
+      font-family: Mont SemiBold, sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+}

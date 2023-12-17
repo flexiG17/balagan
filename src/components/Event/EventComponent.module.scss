@@ -1,0 +1,12 @@
+.block {
+  display: flex;
+  flex-direction: column;
+
+  &_grid {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}

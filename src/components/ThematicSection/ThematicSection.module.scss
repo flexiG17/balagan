@@ -1,0 +1,31 @@
+.content {
+  padding-left: 130px;
+  padding-right: 130px;
+
+  &_titleBlock {
+    display: flex;
+    justify-content: space-between;
+
+    &_text {
+      color: #18132C;
+      font-family: Mont SemiBold, Arial, sans-serif;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      cursor: pointer;
+    }
+  }
+
+  &_cards {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 140px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 45px;
+  }
+}
+
