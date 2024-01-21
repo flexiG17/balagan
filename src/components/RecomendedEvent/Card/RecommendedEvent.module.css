@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card {
   display: flex;
   flex-direction: column;
@@ -20,9 +21,8 @@
   cursor: pointer;
 }
 .card_price {
-  max-width: 150px;
   display: inline-block;
-  width: auto;
+  width: fit-content;
   height: 45px;
   border: 1px solid #fff;
   background-color: #FFFFFF;
@@ -51,12 +51,15 @@
 .card_info_title {
   color: #000;
   font-family: Mont, Arial, sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   margin-bottom: 5px;
   cursor: pointer;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .card_info_more {
   display: flex;
@@ -65,6 +68,7 @@
   margin-top: 5px;
   width: 35px;
   height: 35px;
+  margin-right: 10px;
 }
 .card_info_more_text {
   color: #000;
@@ -73,7 +77,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: 50px;
-  margin-left: 24px;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 
 /*# sourceMappingURL=RecommendedEvent.module.css.map */

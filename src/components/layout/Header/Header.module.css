@@ -33,8 +33,7 @@
 
 .navBlock {
   display: flex;
-  justify-content: space-between;
-  width: 500px;
+  gap: 70px;
   margin-top: 120px;
 }
 

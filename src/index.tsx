@@ -13,6 +13,7 @@ import EventPage from "./pages/Event/EventPage";
 import CommunityPage from "./pages/Community/CommunityPage/CommunityPage";
 import SectionsListPage from "./pages/SectionsList/SectionsListPage";
 import SectionPage from "./pages/Section/SectionPage";
+import ModeratorPage from "./pages/Moderator/ModeratorPage";
 
 const router = createBrowserRouter([
     {
@@ -40,11 +41,11 @@ const router = createBrowserRouter([
         element: <PopularCommunityPage/>
     },
     {
-        path: '/event',
+        path: '/event/:id',
         element: <EventPage/>
     },
     {
-        path: '/community',
+        path: '/community/:id',
         element: <CommunityPage/>
     },
     {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
     {
         path: '/section',
         element: <SectionPage/>
+    },
+    {
+        path: '/moderator',
+        element: <ModeratorPage/>
     }
 ])
 

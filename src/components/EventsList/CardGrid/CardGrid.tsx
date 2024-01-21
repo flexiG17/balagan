@@ -20,11 +20,11 @@ const CardGrid = ({type} : CardGridInterface) => {
             }
             {type === 'event' &&
                 <>
+                    {/*<RecommendedEventCard/>
                     <RecommendedEventCard/>
                     <RecommendedEventCard/>
                     <RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
+                    <RecommendedEventCard/>*/}
                 </>
             }
         </section>

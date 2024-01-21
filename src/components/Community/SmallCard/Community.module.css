@@ -1,21 +1,22 @@
 .card {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   max-width: 230px;
+  align-items: center;
 }
 .card_image {
-  width: 230px;
-  margin-bottom: 40px;
+  width: 180px;
   cursor: pointer;
 }
 .card_title {
   color: #000;
   text-align: center;
   font-family: Mont SemiBold, Arial, sans-serif;
-  font-size: 35px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 500;
   cursor: pointer;
 }
 
-/*# sourceMappingURL=PopularCommunityPage.module.css.map */
+/*# sourceMappingURL=Community.module.css.map */

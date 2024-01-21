@@ -31,11 +31,6 @@ const Header = () => {
                         Главная
                     </Link>
                     <Link
-                        to={'/favorite'}
-                        className={`${styles.linkStyle} ${styles.hoverUnderlineAnimation}`}>
-                        Избранное
-                    </Link>
-                    <Link
                         to={'/'}
                         className={`${styles.linkStyle} ${styles.hoverUnderlineAnimation}`}>
                         О нас

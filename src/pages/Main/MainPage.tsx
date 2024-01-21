@@ -1,7 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './MainPage.module.scss'
-import SearchIcon from '../../components/SearchMainPage/assets/search.svg'
-import FilterIcon from '../../components/SearchMainPage/assets/filter.svg'
 import ThematicSection from "../../components/ThematicSection/ThematicSection";
 import WebApplicationSection from "../../components/WebApplicationSection/WebApplicationSection";
 import RecommendedEventCard from "../../components/RecomendedEvent/Card/RecommendedEventCard";
@@ -9,10 +7,33 @@ import CommunityCard from "../../components/Community/SmallCard/CommunityCard";
 import SectionCard from "../../components/Section/SectionCard/SectionCard";
 import Layout from "../../components/layout/Layout";
 import SearchMainPage from "../../components/SearchMainPage/SearchBar/SearchMainPage";
-import Prompt from "../../components/SearchMainPage/Prompt/Prompt";
+import {getEvents} from "../../actions/eventActions";
+import LoadingComponent from "../../components/shared/loading/LoadingComponent";
+import IEvent from "../../interfaces/IEvent";
+import {getCommunities} from "../../actions/communityActions";
+import ICommunity from "../../interfaces/ICommunity";
 
 const MainPage = () => {
+    const [isEventLoading, setIsEventLoading] = useState(true)
+    const [events, setEvents] = useState<IEvent[]>([])
 
+    const [isCommunityLoading, setIsCommunityLoading] = useState(true)
+    const [communities, setCommunities] = useState<ICommunity[]>([])
+
+    useEffect(() => {
+        getEvents(4, 0, 0, 0)
+            .then(({data}) => {
+                setIsEventLoading(false)
+                setEvents(data.data)
+            })
+
+        getCommunities(6, 0, 0)
+            .then(({data}) => {
+                console.log(data);
+                setIsCommunityLoading(false)
+                setCommunities(data.data)
+            })
+    }, [])
     return (
         <Layout>
             <section className={styles.mainInfoBlock}>
@@ -35,17 +56,37 @@ const MainPage = () => {
             <section className={styles.mainContent}>
                 <SearchMainPage/>
                 <ThematicSection title={'Рекомендуем посетить'} action={'recommended'}>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
+                    {isEventLoading
+                        ?
+                        <LoadingComponent/>
+                        :
+                        <>
+                            {events.map((event) => {
+                                return <RecommendedEventCard
+                                    name={event.name}
+                                    event_id={event.event_id}
+                                    place={event.place}
+                                    date={event.date}
+                                    price={event.price}
+                                />
+                            })}
+                        </>}
                 </ThematicSection>
                 <ThematicSection title={'Популярные коммьюнити'} action={'popularCommunity'}>
-                    <CommunityCard text={'Все о хмели'}/>
-                    <CommunityCard text={'Сомелье'}/>
-                    <CommunityCard text={'Пивной Екатеринбург'}/>
-                    <CommunityCard text={'Фермерство как смысл жизни'}/>
-                    <CommunityCard text={'Клуб любителей рока'}/>
+                    {isCommunityLoading
+                        ?
+                        <LoadingComponent/>
+                        :
+                        <>
+                            {communities.map((community) => {
+                                return <CommunityCard
+                                    key={community.community_id}
+                                    name={community.name}
+                                    community_id={community.community_id}
+                                    tags={community.tags}
+                                    description={community.description}/>
+                            })}
+                        </>}
                 </ThematicSection>
                 <ThematicSection title={'Разделы'} action={'sectionsList'}>
                     <SectionCard title={'ВЫСТАВКИ'} text={'Все современное искусство города в одном месте'}/>

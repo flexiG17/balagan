@@ -1,9 +1,10 @@
-.block {
+.grid {
   display: flex;
+  margin-right: 130px;
 }
 
 .block {
-  margin-left: 180px;
+  margin-left: 130px;
   display: flex;
   flex-direction: column;
   width: 500px;

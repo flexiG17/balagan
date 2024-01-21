@@ -9,10 +9,10 @@ const PopularEvent = () => {
                 Популярно на этой неделе
             </h2>
             <div className={styles.block_events}>
+                {/*<RecommendedEventCard/>
                 <RecommendedEventCard/>
                 <RecommendedEventCard/>
-                <RecommendedEventCard/>
-                <RecommendedEventCard/>
+                <RecommendedEventCard/>*/}
             </div>
         </section>
     )

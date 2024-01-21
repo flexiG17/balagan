@@ -8,17 +8,17 @@ import EventSchedule from "./EventSchedule/EventSchedule";
 import EventPlace from "./EventPlace/EventPlace";
 import PopularEvent from "./PopularEvent/PopularEvent";
 
-const EventComponent = () => {
+const EventComponent = ({isEditMode = false} : {isEditMode? : boolean}) => {
     return (
         <section className={styles.grid}>
-            <EventTitle/>
+            <EventTitle idEditMode={isEditMode}/>
             <div className={styles.block_grid}>
                 <EventInfo/>
                 <EventCommunity/>
-                <EventRating/>
-                <EventSchedule title={"Расписание"} buttonText={'Все даты'}/>
+                {!isEditMode && <EventRating/>}
+                {!isEditMode && <EventSchedule title={"Расписание"} buttonText={'Все даты'}/>}
                 <EventPlace/>
-                <PopularEvent/>
+                {!isEditMode && <PopularEvent/>}
             </div>
         </section>
     )

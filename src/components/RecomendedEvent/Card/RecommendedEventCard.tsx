@@ -3,47 +3,59 @@ import styles from './RecommendedEvent.module.scss'
 import FavoriteIcon from "../../../assets/favorite.svg";
 import ClockIcon from "../assets/clock.svg";
 import PlaceIcon from "../assets/place.svg";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import IEvent from '../../../interfaces/IEvent';
 
-const RecommendedEventCard = () => {
+interface IProps extends IEvent{
+    isEditMode? : boolean,
+}
+
+const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price} : IProps) => {
 
     const navigate = useNavigate()
     const handleNavigate = () => {
-        navigate('/event')
+        return `/event/${event_id}`
     }
 
     return (
         <div className={styles.card}>
-            <div
-                onClick={handleNavigate}
-                className={styles.card_image}>
-                <div className={styles.card_image_icons}>
-                    <div className={styles.card_price}>
-                        <p className={styles.card_price_title}>
-                            {`${'300 ₽'}`}
-                        </p>
+            <Link
+                className={styles.card_image}
+                to={handleNavigate()}
+                style={{textDecoration: 'none'}}
+                state={{isEditMode : isEditMode}}
+            >
+                    <div className={styles.card_image_icons}>
+                        <div className={styles.card_price}>
+                            <p className={styles.card_price_title}>
+                                {!isEditMode ? `${price}₽` : 'В обработке'}
+                            </p>
+                        </div>
                     </div>
-                    <div className={styles.card_image_icons_favorite}>
-                        <img src={FavoriteIcon} alt='Добавить в избранное'/>
-                    </div>
-                </div>
-            </div>
+            </Link>
             <div className={styles.card_info}>
-                <h5
-                    onClick={handleNavigate}
-                    className={styles.card_info_title}>
-                    {`${'Дегустация пива'}`}
-                </h5>
+                <Link
+                    to={handleNavigate()}
+                    style={{textDecoration: 'none'}}
+                    state={{isEditMode : isEditMode}}
+                >
+                    <h5
+                        className={styles.card_info_title}>
+                        {name}
+                    </h5>
+                </Link>
                 <div className={styles.card_info_more}>
                     <img className={styles.card_info_more_icons} src={ClockIcon} alt='Иконка времени'/>
                     <div className={styles.card_info_more_text}>
-                        {`${'15 августа'} · ${'12:00'}`}
+                        {Boolean(date) ? date : new Date().toLocaleDateString('ru')}
                     </div>
                 </div>
                 <div className={styles.card_info_more}>
-                    <img className={styles.card_info_more_icons} src={PlaceIcon} alt='Иконка места'/>
+                    <img
+                        style={{paddingRight: 5, paddingLeft: 3}}
+                        className={styles.card_info_more_icons} src={PlaceIcon} alt='Иконка места'/>
                     <div className={styles.card_info_more_text}>
-                        {`${'Площадь 1985'}, ${'5 км'}`}
+                        {place}
                     </div>
                 </div>
             </div>

@@ -1,0 +1,51 @@
+.block {
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 100px;
+
+  &_navPanel {
+    display: flex;
+    justify-content: space-between;
+
+    &_count {
+      display: flex;
+      gap: 30px;
+
+      &_text {
+        color: #18132C;
+
+        font-family: Mont, sans-serif;
+        font-size: 55px;
+        font-weight: 600;
+      }
+
+      &_container {
+        display: flex;
+        align-items: center;
+
+        padding-left: 45px;
+        padding-right: 45px;
+        width: fit-content;
+        height: 70px;
+        border-radius: 20px;
+        background: #3B285C;
+
+        &_value {
+          color: #FFF;
+          text-align: center;
+          font-family: Mont SemiBold, sans-serif;
+          font-size: 37px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &_eventsGrid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 70px;
+  }
+}

@@ -12,17 +12,17 @@ const FavoritePage = () => {
         <Layout>
             <PageTitle title={'Избранное'}/>
             <ThematicSection title={'Рекомендуем посетить'} action={'recommended'}>
+                {/*<RecommendedEventCard/>
                 <RecommendedEventCard/>
                 <RecommendedEventCard/>
-                <RecommendedEventCard/>
-                <RecommendedEventCard/>
+                <RecommendedEventCard/>*/}
             </ThematicSection>
             <ThematicSection title={'Популярные коммьюнити'} action={'community'}>
-                <CommunityCard text={'Все о хмели'}/>
+                {/*<CommunityCard text={'Все о хмели'}/>
                 <CommunityCard text={'Сомелье'}/>
                 <CommunityCard text={'Пивной Екатеринбург'}/>
                 <CommunityCard text={'Фермерство как смысл жизни'}/>
-                <CommunityCard text={'Клуб любителей рока'}/>
+                <CommunityCard text={'Клуб любителей рока'}/>*/}
             </ThematicSection>
             <div className={styles.blockSeparator}>
                 <WebApplicationSection/>

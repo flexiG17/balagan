@@ -1,0 +1,1 @@
+export const URL = 'https://d5dcticqglnk7eqa18rt.apigw.yandexcloud.net'

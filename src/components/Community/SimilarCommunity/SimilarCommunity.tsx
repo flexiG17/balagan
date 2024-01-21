@@ -9,11 +9,12 @@ const SimilarCommunity = () => {
                 Похожие коммьюнити
             </h2>
             <div className={styles.block_card}>
-                <CommunityCard text={'Все о хмели'}/>
+                {/*<CommunityCard text={'Все о хмели'}/>
                 <CommunityCard text={'Сомелье'}/>
                 <CommunityCard text={'Пивной Екатеринбург'}/>
                 <CommunityCard text={'Фермерство как смысл жизни'}/>
                 <CommunityCard text={'Клуб любителей рока'}/>
+                <CommunityCard text={'Клуб любителей рока'}/>*/}
             </div>
         </section>
     )

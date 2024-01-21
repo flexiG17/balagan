@@ -1,0 +1,45 @@
+.block {
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 100px;
+}
+.block_navPanel {
+  display: flex;
+  justify-content: space-between;
+}
+.block_navPanel_count {
+  display: flex;
+  gap: 30px;
+}
+.block_navPanel_count_text {
+  color: #18132C;
+  font-family: Mont, sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+}
+.block_navPanel_count_container {
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  padding-right: 45px;
+  width: fit-content;
+  height: 70px;
+  border-radius: 20px;
+  background: #3B285C;
+}
+.block_navPanel_count_container_value {
+  color: #FFF;
+  text-align: center;
+  font-family: Mont SemiBold, sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+}
+.block_eventsGrid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 70px;
+}
+
+/*# sourceMappingURL=ModeratorPage.module.css.map */

@@ -7,8 +7,12 @@ import CommunityInterests from "./CommunityInterests/CommunityInterests";
 import EventSchedule from "../Event/EventSchedule/EventSchedule";
 import EventRating from "../Event/EventRating/EventRating";
 import SimilarCommunity from "./SimilarCommunity/SimilarCommunity";
+import {useLocation} from "react-router-dom";
 
 const CommunityComponent = () => {
+    const location = useLocation().pathname
+    const community_id = +location[location.length - 1]
+
     return (
         <section className={styles.block}>
             <CommunityTitle/>

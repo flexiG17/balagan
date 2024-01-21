@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ScrollToTop from "./components/utils/scrollToTop";
 
 function App() {
     return (

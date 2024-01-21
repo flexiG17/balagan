@@ -11,9 +11,9 @@ const Answer = () => {
             <h3 className={styles.block_title}>Популярные мероприятия сейчас</h3>
 
             <div className={styles.block_events}>
+                {/*<RecommendedEventCard/>
                 <RecommendedEventCard/>
-                <RecommendedEventCard/>
-                <RecommendedEventCard/>
+                <RecommendedEventCard/>*/}
             </div>
 
             <button
