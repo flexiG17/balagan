@@ -1,11 +1,13 @@
-interface EventScheduleSectionInterface {
-    section: string,
-    place: string,
+import IEvent from "../../../../interfaces/IEvent";
+
+interface EventScheduleSectionInterface extends IEvent{
+    place?: string,
     dateCount: string,
     day: string,
     month: string,
     time: string,
-    price: string
+    price?: number,
+    url?: string
 }
 
 export default EventScheduleSectionInterface

@@ -1,43 +1,48 @@
 import React from 'react'
 import styles from './EventSchedule.module.scss'
 import EventScheduleSection from "./EventScheduleSection/EventScheduleSection";
+import IEvent from "../../../interfaces/IEvent";
 
 interface PropsType {
     title: string,
-    buttonText: string
+    buttonText: string,
+    event?: IEvent
 }
 
-const EventSchedule = ({title, buttonText} : PropsType) => {
+const EventSchedule = ({title, buttonText, event} : PropsType) => {
     return (
         <section className={styles.block}>
             <h2 className={styles.block_title}>
                 {title}
             </h2>
             <EventScheduleSection
-                section={'Дегустация пива'}
+                name={event?.name}
                 day={'понедельник'}
                 dateCount={'15'}
                 month={'января'}
-                place={'г. Екатеринбург, ул. Мира, 47'}
-                price={'300 Р'}
+                place={event?.place}
+                price={event?.price}
+                url={event?.url}
                 time={'15:00'}
             />
             <EventScheduleSection
-                section={'Что-то интересное'}
+                name={event?.name}
                 day={'вторник'}
                 dateCount={'07'}
                 month={'февраля'}
-                place={'г. Екатеринбург, ул. Мира, 32'}
-                price={'1500 Р'}
+                place={event?.place}
+                price={event?.price}
+                url={event?.url}
                 time={'11:00'}
             />
             <EventScheduleSection
-                section={'Ура ведро гвоздей'}
+                name={event?.name}
                 day={'суббота'}
                 dateCount={'23'}
                 month={'декабря'}
-                place={'г. Екатеринбург, ул. Аграрная, 104'}
-                price={'700 Р'}
+                place={event?.place}
+                price={event?.price}
+                url={event?.url}
                 time={'19:00'}
             />
 

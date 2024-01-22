@@ -12,6 +12,8 @@ import LoadingComponent from "../../components/shared/loading/LoadingComponent";
 import IEvent from "../../interfaces/IEvent";
 import {getCommunities} from "../../actions/communityActions";
 import ICommunity from "../../interfaces/ICommunity";
+import {getTags} from "../../actions/tagActions";
+import ITag from "../../interfaces/ITag";
 
 const MainPage = () => {
     const [isEventLoading, setIsEventLoading] = useState(true)
@@ -20,20 +22,38 @@ const MainPage = () => {
     const [isCommunityLoading, setIsCommunityLoading] = useState(true)
     const [communities, setCommunities] = useState<ICommunity[]>([])
 
+    const [isTagLoading, setIsTagLoading] = useState(true)
+    const [tags, setTags] = useState<ITag[]>([])
+
     useEffect(() => {
         getEvents(4, 0, 0, 0)
             .then(({data}) => {
                 setIsEventLoading(false)
                 setEvents(data.data)
             })
+            .catch((e) =>
+                alert(e)
+            )
 
         getCommunities(6, 0, 0)
             .then(({data}) => {
-                console.log(data);
-                setIsCommunityLoading(false)
+                setIsTagLoading(false)
                 setCommunities(data.data)
             })
+            .catch((e) =>
+                alert(e)
+            )
+
+        getTags(4, 0)
+            .then(({data}) => {
+                setIsCommunityLoading(false)
+                setTags(data.data)
+            })
+            .catch((e) =>
+                alert(e)
+            )
     }, [])
+
     return (
         <Layout>
             <section className={styles.mainInfoBlock}>
@@ -89,10 +109,17 @@ const MainPage = () => {
                         </>}
                 </ThematicSection>
                 <ThematicSection title={'Разделы'} action={'sectionsList'}>
-                    <SectionCard title={'ВЫСТАВКИ'} text={'Все современное искусство города в одном месте'}/>
-                    <SectionCard title={'КОНЦЕРТЫ'} text={'Все выступления твоих любимых исполнителей'}/>
-                    <SectionCard title={'ДЕГУСТАЦИИ'} text={'Сыр, вино, чайные церемонии что еще надо для счастья?'}/>
-                    <SectionCard title={'СВИДАНИЯ'} text={'Красивые и романтичные места для времяпрепровождения'}/>
+                    {isTagLoading
+                        ?
+                        <LoadingComponent/>
+                        :
+                        <>
+                            {tags.map((tag) => {
+                                return <SectionCard name={tag.name} tag_id={tag.tag_id} image={tag.image}
+                                                    description={tag.description}/>
+                            })}
+                        </>
+                    }
                 </ThematicSection>
             </section>
             <section className={styles.secondInformation}>

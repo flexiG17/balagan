@@ -1,8 +1,9 @@
 import React from "react";
 import styles from './ComunityInterests.module.scss'
 import CommunitySections from "../CommunitySections/CommunitySections";
+import ICommunity from "../../../interfaces/ICommunity";
 
-const CommunityInterests = () => {
+const CommunityInterests = ({tags} : ICommunity) => {
     return (
         <section className={styles.block}>
             <h2 className={styles.block_title}>
@@ -12,7 +13,7 @@ const CommunityInterests = () => {
                 Или на каких мероприятиях любим проводить время
             </p>
 
-            <CommunitySections/>
+            <CommunitySections tags={tags}/>
         </section>
     )
 }

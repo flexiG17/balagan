@@ -13,7 +13,7 @@
 }
 .block_events {
   display: flex;
-  justify-content: space-between;
+  gap: 110px;
   margin-bottom: 90px;
 }
 .block_button {

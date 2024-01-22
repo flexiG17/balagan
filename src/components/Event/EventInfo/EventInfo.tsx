@@ -1,13 +1,14 @@
 import React from "react";
 import styles from './EventInfo.module.scss'
+import IEvent from "../../../interfaces/IEvent";
 
-const EventInfo = () => {
+const EventInfo = ({event} : {event? : IEvent}) => {
     return (
         <section className={styles.block}>
             <div className={styles.block_data}>
                 <div className={styles.block_data_price}>
                     <p className={styles.block_data_title}>
-                        {`${'300 Р'}`}
+                        {`${event?.price} Р`}
                     </p>
                     <p className={styles.block_data_text}>
                         цена<br/>мероприятия
@@ -16,7 +17,8 @@ const EventInfo = () => {
                 <div className={styles.block_data_date}>
                     <div className={styles.block_data_date_block}>
                         <p className={styles.block_data_title}>
-                            {`${'15.01.2024'}`}
+                            {/*{event.date}*/}
+                            {new Date().toLocaleDateString('ru')}
                         </p>
                         <p className={styles.block_data_text}>
                             ближайшая<br/>
@@ -46,10 +48,7 @@ const EventInfo = () => {
 
             <div className={styles.block_description}>
                 <p className={styles.block_description_text}>
-                    Погрузитесь в мир дегустации прямо на мероприятии!
-                    <br/> <br/>
-                    Найдите себе компанию и проведите время на 5+, наслаждаясь вкуснейшими напитками, сделанными на
-                    Урале.
+                    {event?.description}
                 </p>
                 <p className={styles.block_description_more}>
                     Читать далее

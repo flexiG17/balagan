@@ -5,11 +5,9 @@ import EventComponent from "../../components/Event/EventComponent";
 import {useLocation} from "react-router-dom";
 
 const EventPage = () => {
-    const props = useLocation()
-
     return(
         <Layout>
-            <EventComponent isEditMode={props.state.isEditMode}/>
+            <EventComponent/>
         </Layout>
     )
 }

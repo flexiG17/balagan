@@ -4,42 +4,37 @@ import CommunityImage from "../assets/advice.svg";
 import NotFavoriteIcon from '../assets/notFavorite.svg'
 import GroupPeopleIcon from '../assets/GroupPeople.svg'
 import UserPhotoIcon from '../assets/UserPhoto.svg'
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import ICommunity from "../../../interfaces/ICommunity";
 
-const BigCommunityCard = () => {
-    const navigate = useNavigate()
+const BigCommunityCard = ({name, tags, users, community_id} : ICommunity) => {
+
+    const navigatePath = `/community/${community_id}`
 
     return (
         <section className={styles.card}>
-            <img className={styles.card_favorite} src={NotFavoriteIcon} alt='Не в избранном'/>
-            <img
-                onClick={() => {
-                    navigate('/community')
-                }}
-                className={styles.card_image} src={CommunityImage} alt='Изображение'/>
-            <h5
-                onClick={() => {
-                    navigate('/community')
-                }}
-                className={styles.card_title}>
-                {`${'Все о хмели'}`}
-            </h5>
+            <Link to={navigatePath} style={{marginLeft: 'auto', marginRight: 'auto'}}>
+                <img className={styles.card_image} src={CommunityImage} alt='Изображение'/>
+            </Link>
+            <Link to={navigatePath} style={{textDecoration: 'none'}}>
+                <h5
+                    className={styles.card_title}>
+                    {name}
+                </h5>
+            </Link>
             <div className={styles.card_buttons}>
-                <button className={styles.card_buttons_button}>
-                    <p className={styles.card_buttons_button_text}>
-                        Выставки
-                    </p>
-                </button>
-                <button className={styles.card_buttons_button}>
-                    <p className={styles.card_buttons_button_text}>
-                        Дегустации
-                    </p>
-                </button>
+                {tags?.data.slice(0,2).map(({name, tag_id}) => {
+                    return <Link to={`/section/${tag_id}`} className={styles.card_buttons_button} target={'_blank'}>
+                        <p className={styles.card_buttons_button_text}>
+                            {name}
+                        </p>
+                    </Link>
+                })}
             </div>
             <div className={styles.card_data}>
                 <img className={styles.card_data_image} src={GroupPeopleIcon} alt="Иконка людей"/>
                 <p className={styles.card_data_text}>
-                    {`${'33 участника'}`}
+                    {`${users?.count} участников`}
                 </p>
             </div>
             <div className={styles.card_data}>

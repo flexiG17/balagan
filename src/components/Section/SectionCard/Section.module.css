@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .card {
   display: flex;
   flex-direction: column;
@@ -22,6 +23,9 @@
   margin-bottom: 5px;
   cursor: pointer;
   text-transform: uppercase;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .card_description {
   color: #18132C;
@@ -33,4 +37,4 @@
   cursor: pointer;
 }
 
-/*# sourceMappingURL=Sections.module.css.map */
+/*# sourceMappingURL=Section.module.css.map */

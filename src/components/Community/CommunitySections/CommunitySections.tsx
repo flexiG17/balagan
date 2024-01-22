@@ -1,19 +1,16 @@
 import React from 'react'
 import styles from './CommunitySections.module.scss'
 import SectionChip from "./SectionChip/SectionChip";
+import ICommunity from "../../../interfaces/ICommunity";
 
-const CommunitySections = () => {
+const CommunitySections = ({tags} : ICommunity) => {
+    console.log(tags);
+
     return (
         <section className={styles.grid}>
-            <SectionChip text={'Выставки'}/>
-            <SectionChip text={'Кино'}/>
-            <SectionChip text={'Странное'}/>
-            <SectionChip text={'Алкоголь'}/>
-            <SectionChip text={'18+'}/>
-            <SectionChip text={'Стендап'}/>
-            <SectionChip text={'Музыка'}/>
-            <SectionChip text={'Мастер-классы'}/>
-            <SectionChip text={'Выходные'}/>
+            {tags?.data.map(({name, tag_id}) => {
+                return <SectionChip name={name} tag_id={tag_id}/>
+            })}
         </section>
     )
 }

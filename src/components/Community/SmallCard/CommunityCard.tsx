@@ -10,13 +10,11 @@ const CommunityCard = (props : ICommunity) => {
     return(
         <>
             <div className={styles.card}>
-                <Link to={pathToNavigate} style={{textDecoration: "none"}}>
-                    <img
-                        className={styles.card_image} src={AdviceBackground} alt='Совет'/>
+                <Link to={pathToNavigate} style={{textDecoration: "none"}} target='_blank'>
+                    <img className={styles.card_image} src={AdviceBackground} alt='Совет'/>
                 </Link>
-                <Link to={pathToNavigate} style={{textDecoration: "none"}}>
-                    <h5
-                        className={styles.card_title}>
+                <Link to={pathToNavigate} style={{textDecoration: "none"}} target='_blank'>
+                    <h5 className={styles.card_title}>
                         {props.name}
                     </h5>
                 </Link>

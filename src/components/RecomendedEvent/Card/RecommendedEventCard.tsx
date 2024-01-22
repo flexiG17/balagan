@@ -11,17 +11,16 @@ interface IProps extends IEvent{
 }
 
 const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price} : IProps) => {
+    const path = `/event/${event_id}`
 
-    const navigate = useNavigate()
-    const handleNavigate = () => {
-        return `/event/${event_id}`
-    }
+    const formattedName = name?.replace('&quot;', '«').replace('&quot;', '»')
 
     return (
         <div className={styles.card}>
             <Link
                 className={styles.card_image}
-                to={handleNavigate()}
+                to={path}
+                target={isEditMode ? '' : '_blank'}
                 style={{textDecoration: 'none'}}
                 state={{isEditMode : isEditMode}}
             >
@@ -35,19 +34,19 @@ const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, 
             </Link>
             <div className={styles.card_info}>
                 <Link
-                    to={handleNavigate()}
+                    to={path}
                     style={{textDecoration: 'none'}}
                     state={{isEditMode : isEditMode}}
                 >
                     <h5
                         className={styles.card_info_title}>
-                        {name}
+                        {formattedName}
                     </h5>
                 </Link>
                 <div className={styles.card_info_more}>
                     <img className={styles.card_info_more_icons} src={ClockIcon} alt='Иконка времени'/>
                     <div className={styles.card_info_more_text}>
-                        {Boolean(date) ? date : new Date().toLocaleDateString('ru')}
+                        {Boolean(date) ? date : new Date().toLocaleDateString('ru')} · 15:00
                     </div>
                 </div>
                 <div className={styles.card_info_more}>

@@ -1,11 +1,16 @@
 .block {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+
   border-top: 2px solid #D7C6FF;
   height: 190px;
-  padding-top: 30px;
-  padding-bottom: 30px;
 
+  &_position {
+    display: flex;
+    justify-content: space-between;
+
+  }
 
   &_title {
     color: #18132C;
@@ -17,21 +22,32 @@
   &_place {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 5px;
 
     &_title {
-      width: 450px;
+      width: 500px;
       color: #000;
       font-family: Mont SemiBold, sans-serif;
       font-size: 45px;
       font-weight: 700;
+
+      white-space: nowrap; /* Текст не переносится */
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+      text-overflow: ellipsis; /* Добавляем многоточие */
     }
 
     &_text {
+      max-width: 400px;
+
       color: #3B285C;
       font-family: Mont SemiBold, sans-serif;
       font-size: 20px;
       font-weight: 600;
+
+      overflow: hidden; /* Обрезаем всё за пределами блока */
+      text-overflow: ellipsis; /* Добавляем многоточие */
     }
   }
 
@@ -74,6 +90,10 @@
   }
 
   &_time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     color: #151231;
     text-align: center;
     font-family: Mont SemiBold, sans-serif;
@@ -81,22 +101,33 @@
     font-weight: 700;
   }
 
-  &_button {
-    width: 250px;
-    height: 70px;
+  &_buttonPosition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    border-radius: 20px;
-    border: 3px solid #3B285C;
-    background: #3B285C;
+    &_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-    cursor: pointer;
+      width: 250px;
+      height: 70px;
 
-    p {
-      color: #FFF;
-      text-align: center;
-      font-family: Mont SemiBold, sans-serif;
-      font-size: 32px;
-      font-weight: 700;
+      border-radius: 20px;
+      border: 3px solid #3B285C;
+      background: #3B285C;
+
+      cursor: pointer;
+      text-decoration: none;
+
+      p {
+        color: #FFF;
+        font-family: Mont SemiBold, sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+      }
     }
   }
 }

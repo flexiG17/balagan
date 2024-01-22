@@ -1,12 +1,15 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from './SearchMainPage.module.scss'
 import SearchIcon from '../assets/search.svg'
 import FilterIcon from '../assets/filter.svg'
 import Prompt from "../Prompt/Prompt";
 import Answer from "../Answer/Answer";
+import IEvent from "../../../interfaces/IEvent";
+import {getEvents} from "../../../actions/eventActions";
 
 const SearchMainPage = () => {
-    const [cond, setCond] = useState(false)
+    const [isActive, setIsActive] = useState(false)
+    const [inputData, setInputData] = useState('')
 
     return (
         <>
@@ -15,11 +18,14 @@ const SearchMainPage = () => {
                     <img className={styles.block_component_icon} src={SearchIcon} alt={'Кнопка поиска'}/>
                     <input
                         onFocus={() => {
-                            setCond(true);
+                            setIsActive(true);
                         }}
-                        className={styles.block_input} type="text" placeholder='Введите название'/>
+                        onChange={e => setInputData(e.target.value)}
+                        className={styles.block_input} type="text" placeholder='Введите название'
+                        value={inputData}
+                    />
                     {/*<img className={styles.block_component_icon} src={FilterIcon} alt={'Кнопка поиска'}/>*/}
-                    {cond &&
+                    {isActive &&
                         <div className={styles.block_component_buttons}>
                             <button className={styles.block_component_buttons_search}>
                                 <p className={styles.block_component_buttons_search_text}>
@@ -28,7 +34,8 @@ const SearchMainPage = () => {
                             </button>
                             <button
                                 onClick={() => {
-                                    setCond(false);
+                                    setInputData('')
+                                    setIsActive(false);
                                 }}
                                 className={styles.block_component_buttons_close}>
                                 <p className={styles.block_component_buttons_close_text}>
@@ -39,10 +46,10 @@ const SearchMainPage = () => {
                 </div>
             </section>
 
-            {cond &&
+            {isActive &&
                 <section className={styles.response}>
-                    <Prompt/>
-                    <Answer/>
+                    <Prompt setInputData={setInputData}/>
+                    <Answer inputData={inputData}/>
                 </section>}
 
         </>

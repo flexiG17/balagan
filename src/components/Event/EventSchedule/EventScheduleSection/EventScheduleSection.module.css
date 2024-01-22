@@ -1,10 +1,14 @@
+@charset "UTF-8";
 .block {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   border-top: 2px solid #D7C6FF;
   height: 190px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+}
+.block_position {
+  display: flex;
+  justify-content: space-between;
 }
 .block_title {
   color: #18132C;
@@ -15,20 +19,28 @@
 .block_place {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 .block_place_title {
-  width: 450px;
+  width: 500px;
   color: #000;
   font-family: Mont SemiBold, sans-serif;
   font-size: 45px;
   font-weight: 700;
+  white-space: nowrap; /* Текст не переносится */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .block_place_text {
+  max-width: 400px;
   color: #3B285C;
   font-family: Mont SemiBold, sans-serif;
   font-size: 20px;
   font-weight: 600;
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .block_date {
   display: flex;
@@ -64,23 +76,35 @@
   line-height: 1;
 }
 .block_time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #151231;
   text-align: center;
   font-family: Mont SemiBold, sans-serif;
   font-size: 65px;
   font-weight: 700;
 }
-.block_button {
+.block_buttonPosition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.block_buttonPosition_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   height: 70px;
   border-radius: 20px;
   border: 3px solid #3B285C;
   background: #3B285C;
   cursor: pointer;
+  text-decoration: none;
 }
-.block_button p {
+.block_buttonPosition_container p {
   color: #FFF;
-  text-align: center;
   font-family: Mont SemiBold, sans-serif;
   font-size: 32px;
   font-weight: 700;

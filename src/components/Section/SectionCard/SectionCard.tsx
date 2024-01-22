@@ -1,29 +1,31 @@
 import React from 'react'
 import styles from './Section.module.scss'
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import ITag from "../../../interfaces/ITag";
 
-const SectionCard = ({title, text} : {title : string, text : string}) => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/section')
+const SectionCard = ({name, description, tag_id, image}: ITag) => {
+    const path = `/section/${tag_id}`
+    const linkStyle = {
+        textDecoration: 'none'
     }
 
     return (
         <div className={styles.card}>
-            <div
-                onClick={handleClick}
-                className={styles.card_image}>
-            </div>
-            <h5
-                onClick={handleClick}
-                className={styles.card_title}>
-                {title}
-            </h5>
-            <p
-                onClick={handleClick}
-                className={styles.card_description}>
-                {text}
-            </p>
+            <Link to={path} style={linkStyle} target={'_blank'}>
+                <img className={styles.card_image} src={image} alt={''}/>
+            </Link>
+            <Link to={path} style={linkStyle}>
+                <h5
+                    className={styles.card_title}>
+                    {name.replace(' / ', ' · ')}
+                </h5>
+            </Link>
+            <Link to={path} style={linkStyle}>
+                <p
+                    className={styles.card_description}>
+                    {description}
+                </p>
+            </Link>
         </div>
     )
 }

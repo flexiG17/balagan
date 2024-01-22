@@ -1,7 +1,29 @@
+import IUser from "./IUser";
+import ICommunity from "./ICommunity";
+import ITag from "./ITag";
+
 export default interface IEvent {
-    event_id: number,
-    name: string,
-    place: string,
-    date: string,
-    price: number
+    date?: string,
+    description?: string,
+    event_id?: number,
+    name?: string,
+    organizer_id? : number | null,
+    place?: string,
+    price?: number,
+    time?: string,
+    url?: string,
+    participants?: {
+        data: IUser[],
+        count: number
+    },
+    communities?: {
+        data: ICommunity[],
+        count: number
+    },
+    tags?: {
+        data: ITag[],
+        count: number
+    },
+    isFavorite?: boolean,
+    isJoin?: boolean
 }

@@ -1,13 +1,12 @@
 import React from "react";
 import styles from './CommunityDescription.module.scss'
+import ICommunity from "../../../interfaces/ICommunity";
 
-const CommunityDescription = () => {
+const CommunityDescription = ({description} : ICommunity) => {
     return (
         <section className={styles.block}>
             <p className={styles.block_text}>
-                Ждем всех, кто хочет узнать больше о напитках и любит весело проводить время!
-                <br/><br/>
-                Мы любим ходить на дегустации, мастер-классы, лекции, а также в пабы!
+                {description}
             </p>
             <p className={styles.block_link}>
                 Читать далее

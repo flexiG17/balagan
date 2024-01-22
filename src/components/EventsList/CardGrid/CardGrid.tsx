@@ -4,27 +4,21 @@ import RecommendedEventCard from "../../RecomendedEvent/Card/RecommendedEventCar
 import CardGridInterface from "./EventList.interface";
 import BigCommunityCard from "../../Community/BigCard/BigCommunityCard";
 
-const CardGrid = ({type} : CardGridInterface) => {
+const CardGrid = ({type, events, communities} : CardGridInterface) => {
     return (
         <section className={styles.events}>
             {type === 'community' &&
                 <>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
-                    <BigCommunityCard/>
+                    {communities?.map(({name, community_id, users, tags}) => {
+                        return <BigCommunityCard name={name} community_id={community_id} users={users} tags={tags}/>
+                    })}
                 </>
             }
             {type === 'event' &&
                 <>
-                    {/*<RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>
-                    <RecommendedEventCard/>*/}
+                    {events?.map(({name, event_id, place, price, date}) => {
+                        return <RecommendedEventCard name={name} event_id={event_id} place={place} price={price} date={date}/>
+                    })}
                 </>
             }
         </section>

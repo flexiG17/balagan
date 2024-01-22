@@ -2,18 +2,18 @@ import {createTheme, ThemeProvider} from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import React from "react";
 
-const LoadingComponent = () => {
+const LoadingComponent = ({color = '#3B285C'} : {color?: string}) => {
 
     const theme = createTheme({
         palette: {
             primary: {
-                main: '#3B285C',
+                main: color,
             },
         },
     })
 
     return(
-        <div style={{marginLeft: 'auto', marginRight: 'auto', marginTop: 40}}>
+        <div style={{margin: 'auto'}}>
             <ThemeProvider theme={theme}>
                 <CircularProgress size={100} />
             </ThemeProvider>

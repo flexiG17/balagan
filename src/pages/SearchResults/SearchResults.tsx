@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styles from './SearchResults.module.scss'
 import Layout from "../../components/layout/Layout";
 import ThematicSection from "../../components/ThematicSection/ThematicSection";
@@ -11,21 +11,50 @@ import SearchIcon from "../../components/SearchMainPage/assets/search.svg";
 import EventsList from "../../components/EventsList/EventsList";
 import RangeComponent from "../../components/shared/range/RangeComponent";
 import MultiselectComponent from "../../components/shared/multiselect/MultiselectComponent";
+import {useLocation} from "react-router-dom";
+import IEvent from "../../interfaces/IEvent";
+import {getEvents} from "../../actions/eventActions";
 
 const SearchResults = () => {
+    const dataToSearch = useLocation().state.dataToSearch
+    const [events, setEvents] = useState<IEvent[]>([])
+    const [isLoading, setIsLoading] = useState(true)
+    const [eventCount, setEventCount] = useState(0)
+
+    const eventsPerPage = 12
+    const getNewData = (value: number) => {
+        const offset = value * eventsPerPage - eventsPerPage
+
+        setIsLoading(true)
+        getEvents(eventsPerPage, value * eventsPerPage - eventsPerPage, 0, 0)
+            .then(({data} : {data: {data : IEvent[], count: number}}) => {
+                setIsLoading(false)
+                setEvents(data.data)
+            })
+    }
+
+    useEffect(() => {
+        getEvents(eventsPerPage, 0, 0, 0)
+            .then(({data} : {data: {data : IEvent[], count: number}}) => {
+                setEventCount(data.count)
+                setIsLoading(false)
+                setEvents(data.data)
+            })
+    }, []);
+
     return (
         <Layout>
-            <PageTitle title={'Найдено в категориях'}/>
+            <PageTitle title={'Поиск среди мероприятий'}/>
             <div className={styles.grid}>
                 <section className={styles.block}>
                     <section className={styles.block_info}>
                         <div className={styles.block_info_count}>
                             <h2>
-                                {`${"Дегустация"}`}
+                                {Boolean(dataToSearch) ? dataToSearch : 'Всего'}
                             </h2>
                             <div className={styles.block_info_count_component}>
                                 <p className={styles.block_info_count_component_text}>
-                                    {`${15}`}
+                                    {eventCount}
                                 </p>
                             </div>
                         </div>
@@ -55,12 +84,12 @@ const SearchResults = () => {
                         </div>
                     </section>
 
-                    <RangeComponent leftBorder={'0'} rightBorder={'5679'} title={'Цена, Р'}/>
+                    <RangeComponent leftBorder={0} rightBorder={5679} title={'Цена, Р'}/>
 
                     <MultiselectComponent title={'Удаленность\n' +
                         'от места проведения'} type={'distance'}/>
                 </section>
-                <EventsList type={'event'}/>
+                <EventsList type={'event'} isLoading={isLoading} events={events} getNewData={getNewData}/>
             </div>
         </Layout>
     )

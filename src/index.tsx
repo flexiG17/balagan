@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import MainPage from "./pages/Main/MainPage";
-import FavoritePage from "./pages/Favorite/Favorite";
 import SearchResults from "./pages/SearchResults/SearchResults";
 import RecommendedEventPage from "./pages/RecommendedEvent/RecommendedEventPage";
 import PopularCommunityPage from "./pages/Community/PopularCommunityPage/PopularCommunityPage";
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <MainPage/>
-    },
-    {
-        path: '/favorite',
-        element: <FavoritePage/>
     },
     {
         path: '/searchResults',
@@ -53,7 +48,7 @@ const router = createBrowserRouter([
         element: <SectionsListPage/>
     },
     {
-        path: '/section',
+        path: '/section/:id',
         element: <SectionPage/>
     },
     {

@@ -16,73 +16,10 @@ const TimeLine = () => {
             <div className={styles.block_days}>
                 <div className={styles.block_days_date}>
                     <p className={styles.block_days_date_day}>
-                        15
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        вт
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        16
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        ср
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        17
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        чт
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        18
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        пт
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        19
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        сб
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        20
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        вс
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        21
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        пн
-                    </p>
-                </div><div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
-                        22
-                    </p>
-                    <p className={styles.block_days_date_label}>
-                        вт
-                    </p>
-                </div>
-                <div className={styles.block_days_date}>
-                    <p className={styles.block_days_date_day}>
                         23
                     </p>
                     <p className={styles.block_days_date_label}>
-                        ср
+                        вт
                     </p>
                 </div>
                 <div className={styles.block_days_date}>
@@ -90,7 +27,7 @@ const TimeLine = () => {
                         24
                     </p>
                     <p className={styles.block_days_date_label}>
-                        чт
+                        ср
                     </p>
                 </div>
                 <div className={styles.block_days_date}>
@@ -98,12 +35,75 @@ const TimeLine = () => {
                         25
                     </p>
                     <p className={styles.block_days_date_label}>
-                        пт
+                        чт
                     </p>
                 </div>
                 <div className={styles.block_days_date}>
                     <p className={styles.block_days_date_day}>
                         26
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        пт
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        27
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        сб
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        28
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        вс
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        29
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        пн
+                    </p>
+                </div><div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        30
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        вт
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        31
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        ср
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        01
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        чт
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        02
+                    </p>
+                    <p className={styles.block_days_date_label}>
+                        пт
+                    </p>
+                </div>
+                <div className={styles.block_days_date}>
+                    <p className={styles.block_days_date_day}>
+                        03
                     </p>
                     <p className={styles.block_days_date_label}>
                         сб

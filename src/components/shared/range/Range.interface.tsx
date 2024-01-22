@@ -1,6 +1,6 @@
 interface RangeInterface {
-    leftBorder: string;
-    rightBorder: string;
+    leftBorder: number;
+    rightBorder: number;
     title: string
 }
 
