@@ -1,12 +1,12 @@
 .card {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   width: 350px;
-  height: 480px;
+  height: 365px;
   border-radius: 26px;
   background-color: #18132C;
-  border: 2px solid #18132C;
 
   &_image {
     padding: 18px 20px 0 20px;
@@ -54,6 +54,7 @@
     border-radius: 0 0 26px 26px;
     background-color: #FFFFFF;
     padding: 18px 20px 0 20px;
+    border: 2px solid #18132C;
 
     &_title {
       color: #000;

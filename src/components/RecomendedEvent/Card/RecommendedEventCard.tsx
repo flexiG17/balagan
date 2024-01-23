@@ -10,7 +10,7 @@ interface IProps extends IEvent{
     isEditMode? : boolean,
 }
 
-const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price} : IProps) => {
+const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price, image} : IProps) => {
     const path = `/event/${event_id}`
 
     const formattedName = name?.replace('&quot;', '«').replace('&quot;', '»')
@@ -21,7 +21,12 @@ const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, 
                 className={styles.card_image}
                 to={path}
                 target={isEditMode ? '' : '_blank'}
-                style={{textDecoration: 'none'}}
+                style={{
+                    textDecoration: 'none',
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: 350,
+                    backgroundRepeat: "no-repeat"
+            }}
                 state={{isEditMode : isEditMode}}
             >
                     <div className={styles.card_image_icons}>

@@ -6,7 +6,6 @@ export default interface ICommunity {
     community_id?: number,
     description?: string,
     name?: string,
-    organizer_id?: number | string,
     users?: {
         data: IUser[],
         count: number
@@ -18,5 +17,7 @@ export default interface ICommunity {
     tags?: {
         data: ITag[]
     },
-    i_join?: boolean
+    organizer?: IUser,
+    image?: string,
+    i_join?: boolean,
 }

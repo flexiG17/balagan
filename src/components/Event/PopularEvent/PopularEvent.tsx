@@ -32,7 +32,7 @@ const PopularEvent = () => {
                         :
                         eventList.map((event) => {
                             return <RecommendedEventCard isEditMode={false} name={event.name} event_id={event.event_id}
-                                                         place={event.place} date={event.date} price={event.price}/>
+                                                         place={event.place} date={event.date} price={event.price} image={event.image}/>
                         })}
             </div>
         </section>

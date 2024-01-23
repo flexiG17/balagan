@@ -11,7 +11,7 @@ const CommunityCard = (props : ICommunity) => {
         <>
             <div className={styles.card}>
                 <Link to={pathToNavigate} style={{textDecoration: "none"}} target='_blank'>
-                    <img className={styles.card_image} src={AdviceBackground} alt='Совет'/>
+                    <img className={styles.card_image} src={props.image} alt='Совет'/>
                 </Link>
                 <Link to={pathToNavigate} style={{textDecoration: "none"}} target='_blank'>
                     <h5 className={styles.card_title}>

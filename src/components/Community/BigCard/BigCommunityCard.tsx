@@ -7,14 +7,14 @@ import UserPhotoIcon from '../assets/UserPhoto.svg'
 import {Link, useNavigate} from "react-router-dom";
 import ICommunity from "../../../interfaces/ICommunity";
 
-const BigCommunityCard = ({name, tags, users, community_id} : ICommunity) => {
+const BigCommunityCard = ({name, tags, users, community_id, image} : ICommunity) => {
 
     const navigatePath = `/community/${community_id}`
 
     return (
         <section className={styles.card}>
             <Link to={navigatePath} style={{marginLeft: 'auto', marginRight: 'auto'}}>
-                <img className={styles.card_image} src={CommunityImage} alt='Изображение'/>
+                <img className={styles.card_image} src={image} alt='Изображение'/>
             </Link>
             <Link to={navigatePath} style={{textDecoration: 'none'}}>
                 <h5

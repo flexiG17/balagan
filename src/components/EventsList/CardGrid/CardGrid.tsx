@@ -9,15 +9,15 @@ const CardGrid = ({type, events, communities} : CardGridInterface) => {
         <section className={styles.events}>
             {type === 'community' &&
                 <>
-                    {communities?.map(({name, community_id, users, tags}) => {
-                        return <BigCommunityCard name={name} community_id={community_id} users={users} tags={tags}/>
+                    {communities?.map(({name, community_id, users, tags, image}) => {
+                        return <BigCommunityCard image={image} name={name} community_id={community_id} users={users} tags={tags}/>
                     })}
                 </>
             }
             {type === 'event' &&
                 <>
-                    {events?.map(({name, event_id, place, price, date}) => {
-                        return <RecommendedEventCard name={name} event_id={event_id} place={place} price={price} date={date}/>
+                    {events?.map(({name, event_id, place, price, date, image}) => {
+                        return <RecommendedEventCard name={name} event_id={event_id} place={place} price={price} date={date} image={image}/>
                     })}
                 </>
             }

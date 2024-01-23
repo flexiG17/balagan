@@ -44,8 +44,9 @@ const ModeratorPage = () => {
                         <LoadingComponent/>
                     :
                     <>
-                        {events.map(({event_id, name, place, price, date}) => {
+                        {events.map(({event_id, name, place, price, date, image}) => {
                             return <RecommendedEventCard
+                                image={image}
                                 event_id={event_id}
                                 name={name}
                                 price={price}

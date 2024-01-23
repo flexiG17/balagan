@@ -3,7 +3,7 @@ import styles from './CommunityParticipants.module.scss'
 import CommunityUser from "./CommunityUser/CommunityUser";
 import ICommunity from "../../../interfaces/ICommunity";
 
-const CommunityParticipants = ({users, organizer_id} : ICommunity) => {
+const CommunityParticipants = ({users, organizer} : ICommunity) => {
     return (
         <section className={styles.block}>
             <h2 className={styles.block_title}>
@@ -26,7 +26,7 @@ const CommunityParticipants = ({users, organizer_id} : ICommunity) => {
 
                 <div className={styles.block_author_data}>
                     <p className={styles.block_author_data_name}>
-                        {`${'Виктор Колесов'}`}
+                        {organizer?.name}
                     </p>
                     <p className={styles.block_author_data_description}>
                         Создатель коммьюнити

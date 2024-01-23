@@ -25,5 +25,6 @@ export default interface IEvent {
         count: number
     },
     isFavorite?: boolean,
-    isJoin?: boolean
+    isJoin?: boolean,
+    image?: string
 }

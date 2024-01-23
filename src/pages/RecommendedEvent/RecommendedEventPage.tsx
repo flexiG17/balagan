@@ -40,7 +40,7 @@ const RecommendedEventPage = () => {
             <PageTitle title={'События'}/>
             <div className={styles.block}>
                 <EventFilter count={eventCount}/>
-                <EventsList type={'event'} isLoading={isLoading} events={events} getNewData={getNewData}/>
+                <EventsList type={'event'} isLoading={isLoading} events={events} getNewData={getNewData} />
             </div>
         </Layout>
     )

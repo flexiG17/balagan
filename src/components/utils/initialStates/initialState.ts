@@ -30,14 +30,14 @@ export const InitialStateEvent: IEvent = {
         count: 1
     },
     isFavorite: true,
-    isJoin: true
+    isJoin: true,
+    image: ''
 }
 
 export const InitialStateCommunity: ICommunity = {
     community_id: 1,
     "description": "first community",
     "name": "Main",
-    organizer_id: "Site",
     "users": {
         "data": [
             {
@@ -61,6 +61,7 @@ export const InitialStateCommunity: ICommunity = {
                 "price": 120,
                 "time": "",
                 "url": "https://ekb.kassir.ru/drugie/interaktivnoe-zanyatie-otkryivaya-drevniy-egipet#1260109",
+                image: ''
             },
             {
                 "date": "21 апр. 2023 — 14 янв. 2024",
@@ -72,6 +73,7 @@ export const InitialStateCommunity: ICommunity = {
                 "price": 80,
                 "time": "",
                 "url": "https://ekb.kassir.ru/muzey/na-kryilyah-hudojestvennoy-rospisi#1456177",
+                image: ''
             }
         ],
         "count": 2
@@ -88,5 +90,11 @@ export const InitialStateCommunity: ICommunity = {
             }
         ]
     },
-    i_join: true
+    organizer: {
+        name: '',
+        city: '',
+        user_id: 0,
+        verify: true
+    },
+    i_join: true,
 }

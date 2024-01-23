@@ -16,6 +16,7 @@ const EventSchedule = ({title, buttonText, event} : PropsType) => {
                 {title}
             </h2>
             <EventScheduleSection
+                image={''}
                 name={event?.name}
                 day={'понедельник'}
                 dateCount={'15'}
@@ -26,6 +27,7 @@ const EventSchedule = ({title, buttonText, event} : PropsType) => {
                 time={'15:00'}
             />
             <EventScheduleSection
+                image={''}
                 name={event?.name}
                 day={'вторник'}
                 dateCount={'07'}
@@ -36,6 +38,7 @@ const EventSchedule = ({title, buttonText, event} : PropsType) => {
                 time={'11:00'}
             />
             <EventScheduleSection
+                image={''}
                 name={event?.name}
                 day={'суббота'}
                 dateCount={'23'}

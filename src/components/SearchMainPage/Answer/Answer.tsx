@@ -31,9 +31,9 @@ const Answer = ({inputData}: { inputData: string }) => {
                     <LoadingComponent/>
                     :
                     <>
-                        {dataToDisplay?.map(({name, event_id, date, place, price}) => {
+                        {dataToDisplay?.map(({name, event_id, date, place, price, image}) => {
                             return <RecommendedEventCard name={name} event_id={event_id} date={date} price={price}
-                                                         place={place}/>
+                                                         place={place} image={image}/>
                         })}
                     </>
                 }

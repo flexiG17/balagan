@@ -25,6 +25,7 @@ const MainPage = () => {
     const [isTagLoading, setIsTagLoading] = useState(true)
     const [tags, setTags] = useState<ITag[]>([])
 
+    console.log(tags);
     useEffect(() => {
         getEvents(4, 0, 0, 0)
             .then(({data}) => {
@@ -37,7 +38,7 @@ const MainPage = () => {
 
         getCommunities(6, 0, 0)
             .then(({data}) => {
-                setIsTagLoading(false)
+                setIsCommunityLoading(false)
                 setCommunities(data.data)
             })
             .catch((e) =>
@@ -46,7 +47,7 @@ const MainPage = () => {
 
         getTags(4, 0)
             .then(({data}) => {
-                setIsCommunityLoading(false)
+                setIsTagLoading(false)
                 setTags(data.data)
             })
             .catch((e) =>
@@ -83,6 +84,7 @@ const MainPage = () => {
                         <>
                             {events.map((event) => {
                                 return <RecommendedEventCard
+                                    image={event.image}
                                     name={event.name}
                                     event_id={event.event_id}
                                     place={event.place}
@@ -100,6 +102,7 @@ const MainPage = () => {
                         <>
                             {communities.map((community) => {
                                 return <CommunityCard
+                                    image={community.image}
                                     key={community.community_id}
                                     name={community.name}
                                     community_id={community.community_id}

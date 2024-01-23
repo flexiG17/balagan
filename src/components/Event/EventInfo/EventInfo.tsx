@@ -56,15 +56,9 @@ const EventInfo = ({event} : {event? : IEvent}) => {
             </div>
 
             <div className={styles.block_photos}>
-                <div className={styles.block_photos_image}>
-
-                </div>
-                <div className={styles.block_photos_image}>
-
-                </div>
-                <div className={styles.block_photos_image}>
-
-                </div>
+                <img src={event?.image} className={styles.block_photos_image} alt={''}/>
+                <img src={event?.image} className={styles.block_photos_image} alt={''}/>
+                <img src={event?.image} className={styles.block_photos_image} alt={''}/>
             </div>
         </section>
     )

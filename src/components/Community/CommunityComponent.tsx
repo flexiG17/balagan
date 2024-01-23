@@ -34,7 +34,7 @@ const CommunityComponent = () => {
             <div className={styles.block_grid}>
                 <CommunityDescription description={community.description}/>
                 <div className={styles.block_grid_leftRightBlock}>
-                    <CommunityParticipants users={community.users} organizer_id={community.organizer_id}/>
+                    <CommunityParticipants users={community.users} organizer={community.organizer}/>
                     <CommunityInterests tags={community.tags}/>
                 </div>
                 {/*<EventSchedule title={'Мероприятия коммьюнити'} buttonText={'Все запланированные мероприятия'}/>*/}

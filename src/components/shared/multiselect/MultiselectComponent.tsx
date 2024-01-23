@@ -16,7 +16,7 @@ const MultiselectComponent = ({title, type} : MultiselectInterface) => {
         {
             id: '5',
             label: 'Не дальше 7 км'
-        },
+        },/*
         {
             id: '7',
             label: 'Не дальше 7 км'
@@ -28,7 +28,7 @@ const MultiselectComponent = ({title, type} : MultiselectInterface) => {
         {
             id: '15',
             label: 'Не дальше 15 км'
-        }
+        }*/
     ]
     const sectionValues = [
         {
@@ -50,7 +50,7 @@ const MultiselectComponent = ({title, type} : MultiselectInterface) => {
         {
             id: '5',
             label: 'Кино'
-        },
+        }/*,
         {
             id: '6',
             label: 'Театр'
@@ -82,7 +82,7 @@ const MultiselectComponent = ({title, type} : MultiselectInterface) => {
         {
             id: '13',
             label: 'Музыка'
-        }
+        }*/
     ]
 
     const data =
