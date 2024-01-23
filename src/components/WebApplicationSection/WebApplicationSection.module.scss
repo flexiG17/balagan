@@ -28,8 +28,9 @@
   }
 
   &_button {
-    display: inline-block;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 90px;
 
@@ -38,6 +39,7 @@
     border: none;
 
     cursor: pointer;
+    text-decoration: none;
 
     &_text {
       color: #FFF;
