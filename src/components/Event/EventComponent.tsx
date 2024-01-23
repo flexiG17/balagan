@@ -33,7 +33,9 @@ const EventComponent = () => {
 
     return (
         <section className={styles.grid}>
-            <EventTitle idEditMode={isEditMode} isLoading={isLoading} name={formattedName} url={event?.url}/>
+            <EventTitle setLoading={setIsLoading}
+                // @ts-ignore
+                event_id={event_id} idEditMode={isEditMode} isLoading={isLoading} name={formattedName} url={event?.url}/>
             <div className={styles.block_grid}>
                 {isLoading
                     ?

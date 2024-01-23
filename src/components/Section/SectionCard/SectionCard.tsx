@@ -12,7 +12,8 @@ const SectionCard = ({name, description, tag_id, image}: ITag) => {
     return (
         <div className={styles.card}>
             <Link to={path} style={linkStyle} target={'_blank'}>
-                <img className={styles.card_image} src={image} alt={''}/>
+                <div className={styles.card_image}>
+                </div>
             </Link>
             <Link to={path} style={linkStyle}>
                 <h5

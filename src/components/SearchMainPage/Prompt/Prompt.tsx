@@ -14,25 +14,25 @@ const Prompt = ({setInputData} : {setInputData : Dispatch<SetStateAction<string>
                 <div className={styles.block_info_request}>
                     <img className={styles.block_info_request_icon} src={ClockItem} alt='Иконка'/>
                     <p
-                        onClick={() => setInputData('Выставка')}
+                        onClick={() => setInputData('Литературный')}
                         className={styles.block_info_request_text}>
-                        {`${'Выставка'}`}
+                        {`${'Литературный'}`}
                     </p>
                 </div>
                 <div className={styles.block_info_request}>
                     <img className={styles.block_info_request_icon} src={ClockItem} alt='Иконка'/>
                     <p
-                        onClick={() => setInputData('Асбест')}
+                        onClick={() => setInputData('Мастер-класс')}
                         className={styles.block_info_request_text}>
-                        {`${'Асбест'}`}
+                        {`${'Мастер-класс'}`}
                     </p>
                 </div>
                 <div className={styles.block_info_request}>
                     <img className={styles.block_info_request_icon} src={ClockItem} alt='Иконка'/>
                     <p
-                        onClick={() => setInputData('Дегустация')}
+                        onClick={() => setInputData('Модный показ')}
                         className={styles.block_info_request_text}>
-                        {`${'Дегустация'}`}
+                        {`${'Модный показ'}`}
                     </p>
                 </div>
             </section>

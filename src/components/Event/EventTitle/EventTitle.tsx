@@ -1,16 +1,37 @@
-import React from 'react'
+import React, {Dispatch, SetStateAction, useState} from 'react'
 import styles from './EventTitle.module.scss'
 import FavoriteIcon from '../../../assets/favorite.svg'
 import LoadingComponent from "../../shared/loading/LoadingComponent";
 import IEvent from "../../../interfaces/IEvent";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {changeEventStatus} from "../../../actions/eventActions";
 
-interface IProps extends IEvent{
+interface IProps extends IEvent {
     idEditMode?: boolean,
-    isLoading?: boolean
+    isLoading?: boolean,
+    setLoading: Dispatch<SetStateAction<boolean>>
 }
 
-const EventTitle = ({idEditMode = false, isLoading = false, name, url = '/'}: IProps) => {
+const EventTitle = ({idEditMode = false, isLoading = false, name, url = '/', event_id, setLoading}: IProps) => {
+    const [status, setStatus] = useState<'confirm' | 'cancel'>()
+    const navigate = useNavigate()
+    const handleChangeStatus = () => {
+        setLoading(true)
+        // @ts-ignore
+        changeEventStatus(event_id.toString(), status)
+            .then((result) => {
+                setLoading(false)
+                alert('Статус мероприятия изменен')
+                setTimeout(() => {
+                    navigate('/moderator')
+                }, 1000)
+            })
+            .catch((e) => {
+                setLoading(false)
+                alert(e.response.data.message)
+            })
+    }
+
     return (
         <section className={styles.block}>
             <div className={styles.block_data}>
@@ -45,9 +66,14 @@ const EventTitle = ({idEditMode = false, isLoading = false, name, url = '/'}: IP
                             <button className={styles.block_data_buttons_buy}>
                                 {idEditMode
                                     ?
-                                        <p className={styles.block_data_buttons_buy_text}>
-                                            Опубликовать
-                                        </p>
+                                    <p
+                                        onClick={() => {
+                                            setStatus('confirm')
+                                            handleChangeStatus()
+                                        }}
+                                        className={styles.block_data_buttons_buy_text}>
+                                        Опубликовать
+                                    </p>
                                     :
                                     <Link
                                         to={url}
@@ -61,9 +87,22 @@ const EventTitle = ({idEditMode = false, isLoading = false, name, url = '/'}: IP
                                 }
                             </button>
                             <button className={styles.block_data_buttons_notActual}>
-                                <p className={styles.block_data_buttons_notActual_text}>
-                                    {idEditMode ? 'Отклонить' : 'Уже ходил'}
-                                </p>
+                                {
+                                    idEditMode
+                                        ?
+                                        <p
+                                            onClick={() => {
+                                                setStatus('cancel')
+                                                handleChangeStatus()
+                                            }}
+                                            className={styles.block_data_buttons_notActual_text}>
+                                            Отклонить
+                                        </p>
+                                        :
+                                        <p className={styles.block_data_buttons_notActual_text}>
+                                            Уже ходил
+                                        </p>
+                                }
                             </button>
                         </div>
                     </>

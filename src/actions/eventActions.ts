@@ -16,6 +16,20 @@ export const getEvents = async (limit : number, offset : number, is_me: 0 | 1, i
     })
 }
 
+export const getModeratorEvents = async (limit : number, offset : number, is_me : boolean) => {
+    return await axios.get(`${AXIOS_URL}/events/check`, {
+        headers: {
+            'Authorization': 'Basic bWFzdGVyOm1hc3Rlcg==',
+            "Content-Type": 'application/json',
+        },
+        params: {
+            limit,
+            offset,
+            is_me
+        }
+    })
+}
+
 export const getSingleEvent = async (event_id : string | undefined) => {
     return await axios.get(`${AXIOS_URL}/event`, {
         headers: {
@@ -24,6 +38,15 @@ export const getSingleEvent = async (event_id : string | undefined) => {
         },
         params: {
             event_id
+        }
+    })
+}
+
+export const changeEventStatus = async (event_id: string, status: 'confirm' | 'cancel') => {
+    return await axios.post(`${AXIOS_URL}/event/check`, {event_id, status}, {
+        headers: {
+            'Authorization': 'Basic bWFzdGVyOm1hc3Rlcg==',
+            "Content-Type": 'application/json',
         }
     })
 }

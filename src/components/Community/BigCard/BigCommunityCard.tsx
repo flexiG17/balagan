@@ -14,7 +14,13 @@ const BigCommunityCard = ({name, tags, users, community_id, image} : ICommunity)
     return (
         <section className={styles.card}>
             <Link to={navigatePath} style={{marginLeft: 'auto', marginRight: 'auto'}}>
-                <img className={styles.card_image} src={image} alt='Изображение'/>
+                {Boolean(image)
+                    ?
+                    <img className={styles.card_image} src={image} alt='Изображение'/>
+                    :
+                    <div className={styles.card_image}></div>
+                }
+
             </Link>
             <Link to={navigatePath} style={{textDecoration: 'none'}}>
                 <h5

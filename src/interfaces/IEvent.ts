@@ -6,6 +6,7 @@ export default interface IEvent {
     date?: string,
     description?: string,
     event_id?: number,
+    'es.status'?: 'cancel' | 'confirm' | 'check'
     name?: string,
     organizer_id? : number | null,
     place?: string,

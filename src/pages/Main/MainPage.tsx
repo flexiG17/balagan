@@ -25,7 +25,6 @@ const MainPage = () => {
     const [isTagLoading, setIsTagLoading] = useState(true)
     const [tags, setTags] = useState<ITag[]>([])
 
-    console.log(tags);
     useEffect(() => {
         getEvents(4, 0, 0, 0)
             .then(({data}) => {
@@ -45,7 +44,7 @@ const MainPage = () => {
                 alert(e)
             )
 
-        getTags(4, 0)
+        getTags(4, 3)
             .then(({data}) => {
                 setIsTagLoading(false)
                 setTags(data.data)
@@ -135,32 +134,28 @@ const MainPage = () => {
                         <div className={styles.secondInformationImage}>
                         </div>
                         <h5 className={styles.secondInformationText}>
-                            {`${'ПРЕИМУЩЕСТВО\n' +
-                            'ПЕРВОЕ'}`}
+                            поможем отдыхать интересно и активно
                         </h5>
                     </div>
                     <div className={styles.sectionBlock}>
                         <div className={styles.secondInformationImage}>
                         </div>
                         <h5 className={styles.secondInformationText}>
-                            {`${'ПРЕИМУЩЕСТВО\n' +
-                            'ПЕРВОЕ'}`}
+                            у нас уникальный контент
                         </h5>
                     </div>
                     <div className={styles.sectionBlock}>
                         <div className={styles.secondInformationImage}>
                         </div>
                         <h5 className={styles.secondInformationText}>
-                            {`${'ПРЕИМУЩЕСТВО\n' +
-                            'ПЕРВОЕ'}`}
+                            найдете полезные и приятные знакомства
                         </h5>
                     </div>
                     <div className={styles.sectionBlock}>
                         <div className={styles.secondInformationImage}>
                         </div>
                         <h5 className={styles.secondInformationText}>
-                            {`${'ПРЕИМУЩЕСТВО\n' +
-                            'ПЕРВОЕ'}`}
+                            тут любой может стать организатором
                         </h5>
                     </div>
                 </div>

@@ -62,7 +62,7 @@
 .sectionBlock {
   display: flex;
   flex-direction: column;
-  max-width: 350px;
+  max-width: 370px;
 }
 
 .sectionImage {
@@ -128,16 +128,17 @@
   border-radius: 10px;
   background: #FFFFFF;
   cursor: pointer;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
 }
 
 .secondInformationText {
   color: #fff;
   font-family: Mont, Arial, sans-serif;
-  font-size: 35px;
+  font-size: 28px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 50px;
+  text-transform: uppercase;
   margin-bottom: 5px;
   cursor: pointer;
   padding-bottom: 100px;

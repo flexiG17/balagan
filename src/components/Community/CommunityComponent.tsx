@@ -13,11 +13,12 @@ import ICommunity from "../../interfaces/ICommunity";
 import {InitialStateCommunity} from "../utils/initialStates/initialState";
 
 const CommunityComponent = () => {
-    const [community, setCommunity] = useState<ICommunity>(InitialStateCommunity)
+    const [community, setCommunity] = useState<ICommunity>({})
     const [isLoading, setLoading] = useState(true)
 
     const communityId = useParams().id
 
+    console.log(community);
     useEffect(() => {
         getSingleCommunity(communityId)
             .then(({data}) => {

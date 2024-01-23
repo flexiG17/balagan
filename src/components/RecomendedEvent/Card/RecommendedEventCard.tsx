@@ -8,13 +8,14 @@ import IEvent from '../../../interfaces/IEvent';
 
 interface IProps extends IEvent{
     isEditMode? : boolean,
+    status?: 'cancel' | 'confirm' | 'check'
 }
 
-const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price, image} : IProps) => {
+const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, price, image, status} : IProps) => {
     const path = `/event/${event_id}`
 
     const formattedName = name?.replace('&quot;', '«').replace('&quot;', '»')
-
+    console.log(status);
     return (
         <div className={styles.card}>
             <Link
@@ -32,7 +33,7 @@ const RecommendedEventCard = ({isEditMode = false, event_id, name, date, place, 
                     <div className={styles.card_image_icons}>
                         <div className={styles.card_price}>
                             <p className={styles.card_price_title}>
-                                {!isEditMode ? `${price}₽` : 'В обработке'}
+                                {!isEditMode ? `${price}₽` : (status === 'check' ? 'В обработке' : (status === "cancel") ? 'Отклонен' : 'На проверке')}
                             </p>
                         </div>
                     </div>

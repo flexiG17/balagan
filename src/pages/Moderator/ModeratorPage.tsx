@@ -5,7 +5,7 @@ import PageTitle from "../../components/PageTitle/PageTitle";
 import SelectComponent from "../../components/shared/select/SelectComponent";
 import RecommendedEventCard from "../../components/RecomendedEvent/Card/RecommendedEventCard";
 import IEvent from "../../interfaces/IEvent";
-import {getEvents} from "../../actions/eventActions";
+import {getEvents, getModeratorEvents} from "../../actions/eventActions";
 import LoadingComponent from "../../components/shared/loading/LoadingComponent";
 
 
@@ -14,7 +14,7 @@ const ModeratorPage = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        getEvents(16, 0, 0, 0)
+        getModeratorEvents(16, 0, false)
             .then(({data} : {data: {data : IEvent[], count: number}}) => {
                 setIsLoading(false)
                 setEvents(data.data)
@@ -32,7 +32,7 @@ const ModeratorPage = () => {
                         </p>
                         <div className={styles.block_navPanel_count_container}>
                             <p className={styles.block_navPanel_count_container_value}>
-                                25
+                                {events.length}
                             </p>
                         </div>
                     </div>
@@ -44,31 +44,21 @@ const ModeratorPage = () => {
                         <LoadingComponent/>
                     :
                     <>
-                        {events.map(({event_id, name, place, price, date, image}) => {
+                        {events.map((event) => {
                             return <RecommendedEventCard
-                                image={image}
-                                event_id={event_id}
-                                name={name}
-                                price={price}
-                                date={date}
-                                place={place}
+                                // @ts-ignore
+                                status={event['es.status']}
+                                image={event.image}
+                                event_id={event.event_id}
+                                name={event.name}
+                                price={event.price}
+                                date={event.date}
+                                place={event.place}
                                 isEditMode={true}
                             />
                         })}
                     </>
                     }
-                    {/*<RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>
-                    <RecommendedEventCard isEditMode={true}/>*/}
                 </div>
             </section>
         </Layout>
